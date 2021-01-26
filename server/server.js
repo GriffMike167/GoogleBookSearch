@@ -15,7 +15,7 @@ if (process.env.NODE_ENV === "production") {
 
 app.use(routes);
 
-const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/googlebooks"
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb+srv://admin:1KLeGaDxOEGUNhlN@cluster0.1usim.mongodb.net/message?retryWrites=true&w=majority"
 
 mongoose.connect(MONGODB_URI, {useNewUrlParser: true});
 

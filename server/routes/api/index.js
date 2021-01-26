@@ -1,5 +1,5 @@
-const router = require('express').Router()
-const bookRoutes = require('./api')
+const router = require('express-router')
+const bookRoutes = require('./books')
 
 router.use("./books", bookRoutes)
 

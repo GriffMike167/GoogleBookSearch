@@ -1,7 +1,7 @@
 /* eslint-disable import/no-anonymous-default-export */
 import axios from "axios"
 require("dotenv").config();
-const API_KEY = "";
+const API_KEY = "AIzaSyBgP2ElXNk0pOcLccuI3Qc7nji5w5Pvg4g";
 
 
 export default {
