@@ -6,7 +6,19 @@ import { Container, Row, Col } from "../components/Grid";
 import { Input, FormBtn } from "../components/Form";
 
 
-
+class Books extends Component {
+    state = {
+      books: [],
+      search: "",
+      title: "",
+      author: "",
+      description: ""
+    };
+  
+    componentDidMount() {
+  
+    }
+  
 
 
 handleInputChange = event => {
@@ -31,3 +43,8 @@ handleSavedBook = data => {
    
     .catch(err => console.log(err));
   }
+
+
+}
+
+export default Books;
