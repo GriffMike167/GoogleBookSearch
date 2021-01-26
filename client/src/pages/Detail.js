@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
+import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API"
 
 
@@ -20,9 +21,11 @@ class Detail extends Component {
           <Container fluid>
             <Row>
               <Col size="md-8">
+                <Jumbotron>
                   <h1>
                     {this.state.book.title} by {this.state.book.author}
                   </h1>
+                  </Jumbotron>
               </Col>
             </Row>
             <Row>
