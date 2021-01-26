@@ -28,10 +28,10 @@ module.exports = {
         .then(dbModel => res.json(dbModel))
         .catch(err => res.status(400).json.err)
     },
-    delete: function(req, res) {
+    remove: function(req, res) {
         db.Book
         .findById({_id: req.params.id})
-        .sort({ date: -1})
+        .then(dbModel => dbModel.remove)
         .then(dbModel => res.json(dbModel))
         .catch(err => res.status(400).json.err)
         

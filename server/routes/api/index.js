@@ -1,7 +1,7 @@
 const router = require('express-router')
 const bookRoutes = require('./books')
 
-router.use("./books", bookRoutes)
+router.use("/books", bookRoutes)
 
 
 

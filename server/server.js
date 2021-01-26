@@ -13,7 +13,7 @@ if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));
   }
 
-app.use(routes);
+app.use('/', routes);
 
 const MONGODB_URI = process.env.MONGODB_URI || "mongodb+srv://admin:1KLeGaDxOEGUNhlN@cluster0.1usim.mongodb.net/message?retryWrites=true&w=majority"
 
