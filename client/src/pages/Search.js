@@ -63,8 +63,45 @@ handleSavedBook = data => {
                 name="search"
                 placeholder="Search for a Book"
               />
+              <FormBtn
+                disabled={!(this.state.search)}
+                onClick={this.handleFormSubmit}
+              >
+                Search Book
+              </FormBtn>
             </form>
             </div>
+            </Col>
+            </Row>
+            <Row>
+            <Col size="md-12">
+              {!this.state.books.length ? (
+                <h1 id="message" className="text-center">No Books To Display</h1> 
+              ) : (
+                <div>
+                  {this.state.books.map(books => {
+                    return(
+                      <BookListItem 
+                        key={books.id}
+                        title={books.volumeInfo.title}
+                        author={books.volumeInfo.authors}
+                        id={books.id}
+                        href={books.volumeInfo.previewLink}
+                        thumbnail={books.volumeInfo.imageLinks.thumbnail}
+                        description={books.volumeInfo.description}
+                        handleSavedBook={() => this.handleSavedBook({
+                          title: books.volumeInfo.title,
+                          author: books.volumeInfo.authors,
+                          id: books.id,
+                          href: books.volumeInfo.previewLink,
+                          thumbnail: books.volumeInfo.imageLinks.thumbnail,
+                          description: books.volumeInfo.description
+                        })}
+                      />    
+                  );              
+                  })}                             
+            </div>
+)}
         </Col>
         </Row>
         </Container>
