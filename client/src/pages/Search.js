@@ -44,7 +44,36 @@ handleSavedBook = data => {
     .catch(err => console.log(err));
   }
 
+  render() {
+    return (
+      <div>
+        <Jumbotron>
+          <h1>Google Books Search</h1>
+          <h5>Search for and Save Books of Interest</h5>
+        </Jumbotron>
+      <Container fluid>
+      <Row>
+      <Col size="md-6">
+            <div>
+            <form>
+                Book Search:
+              <Input
+                value={this.state.search}
+                onChange={this.handleInputChange}
+                name="search"
+                placeholder="Search for a Book"
+              />
+            </form>
+            </div>
+        </Col>
+        </Row>
+        </Container>
+    </div>
+);
 
+
+    
+}
 }
 
 export default Books;
