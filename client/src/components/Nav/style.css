@@ -1,0 +1,12 @@
+
+#search, #saved {
+    color: #b1aeae;
+}
+
+#search:hover, #saved:hover {
+    color: #641411;
+}
+
+#nav {
+    background-color: rgb(71, 70, 70);
+}
